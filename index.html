@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Agenda Web</title>
+</head>
+
+<body>
+    <!-- ========== Start Contact List ========== -->
+
+    <section>
+        <!--for demo wrap-->
+        <h1>Agenda Web</h1>
+        <div class="optionsbar">
+            <input type="text" id="filter" onkeyup="filterContacts()" placeholder="Search for names..">
+            <button class="btnAdd" onclick="showContactForm()">Nuevo Contacto</button>
+        </div>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="contact_list">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- ========== End Contact List ========== -->
+
+
+    <!-- ========== Start add contact form ========== -->
+
+    </div>
+    <div class="overlay">
+        <div class="overlay-container">
+            <div class="contact-form-div">
+                <div class="form-header">
+                    <h1 class="form-title">Agregar Contacto</h1><button class="btnClose" onclick="closeForm()">x</button>
+                </div>
+                <form class="contact-form">
+                
+                    <label for="name"><b>Nombre</b></label>
+                    <input id="nombre"  type="text" placeholder="Ingresa el nombre" name="name" required>
+                
+                    <label for="lastame"><b>Apellido</b></label>
+                    <input id="apellido" type="text" placeholder="Ingresa el apellido" name="lastname" required>
+
+                    <label for="telephone"><b>Teléfono</b></label>
+                    <input id="telefono" type="tel" placeholder="Ingresa el número" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    
+                </form>
+                <input type="button" id="btnGuadar" class="btnGuardar" value="Guardar" onclick="saveContact()">
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== End add contact form ========== -->
+</body>
+<script src="js/index.js"></script>
+
+</html>
